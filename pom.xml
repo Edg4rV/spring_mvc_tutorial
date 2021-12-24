@@ -12,7 +12,19 @@
     <properties>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--            </resource>-->
+<!--            <resource>-->
+<!--                <directory>src/main/java</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--        </resources>-->
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -79,12 +91,35 @@
             <artifactId>javax.annotation-api</artifactId>
             <version>1.3.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.integration</groupId>-->
+<!--            <artifactId>spring-integration-groovy</artifactId>-->
+<!--            <version>5.2.8.RELEASE</version>-->
+<!--        </dependency>-->
+
+
+
 
     </dependencies>
 
 
     <build>
     <finalName>test</finalName>
+                <resources>
+<!--                    <resource>-->
+<!--                        <directory>src/main/resources</directory>-->
+<!--                    </resource>-->
+                    <resource>
+                        <directory>src/main/java</directory>
+                        <includes>
+                            <include>**/*.properties</include>
+                            <include>**/*.xml</include>
+                        </includes>
+                    </resource>
+                </resources>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
         <plugins>
             <plugin>
@@ -119,7 +154,5 @@
         </plugins>
     </pluginManagement>
 </build>
-
-
 
 </project>
