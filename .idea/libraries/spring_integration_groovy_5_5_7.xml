@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="spring-integration-groovy-5.5.7">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/spring-integration-groovy-5.5.7.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
