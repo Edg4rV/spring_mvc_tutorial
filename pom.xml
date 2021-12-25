@@ -12,17 +12,6 @@
     <properties>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
-<!--        <resources>-->
-<!--            <resource>-->
-<!--                <directory>src/main/resources</directory>-->
-<!--            </resource>-->
-<!--            <resource>-->
-<!--                <directory>src/main/java</directory>-->
-<!--                <includes>-->
-<!--                    <include>**/*.xml</include>-->
-<!--                </includes>-->
-<!--            </resource>-->
-<!--        </resources>-->
     </properties>
 
 
@@ -39,6 +28,15 @@
             <artifactId>spring-web</artifactId>
             <version>5.3.14</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.2</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -85,6 +83,21 @@
             <type>pom</type>
         </dependency>
 
+
+        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-jaxb -->
+<!--        <dependency>-->
+<!--            <groupId>org.codehaus.groovy</groupId>-->
+<!--            <artifactId>groovy-jaxb</artifactId>-->
+<!--            <version>3.0.9</version>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<!--        <dependency>-->
+<!--            <groupId>javax.xml.bind</groupId>-->
+<!--            <artifactId>jaxb-api</artifactId>-->
+<!--            <version>2.4.0-b180830.0359</version>-->
+<!--        </dependency>-->
+
+
         <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
         <dependency>
             <groupId>javax.annotation</groupId>
@@ -94,11 +107,11 @@
         <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
         <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
         <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.integration</groupId>-->
-<!--            <artifactId>spring-integration-groovy</artifactId>-->
-<!--            <version>5.2.8.RELEASE</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-groovy</artifactId>
+            <version>5.2.8.RELEASE</version>
+        </dependency>
 
 
 
@@ -109,9 +122,9 @@
     <build>
     <finalName>test</finalName>
                 <resources>
-<!--                    <resource>-->
-<!--                        <directory>src/main/resources</directory>-->
-<!--                    </resource>-->
+                    <resource>
+                        <directory>src/main/resources</directory>
+                    </resource>
                     <resource>
                         <directory>src/main/java</directory>
                         <includes>
