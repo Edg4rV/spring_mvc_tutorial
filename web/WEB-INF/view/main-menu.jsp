@@ -1,5 +1,14 @@
 <html>
-<h1>
-Hello
-</h1>
+
+
+<body>
+<h2> Spring MVC Demo - Home Page</h2>
+
+<hr>
+
+<a href="showForm">Hello World form</a>
+
+</body>
+
+
 </html>
