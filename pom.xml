@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+
+
     <properties>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
@@ -16,6 +18,7 @@
 
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
@@ -84,6 +87,7 @@
         </dependency>
 
 
+
         <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-jaxb -->
 <!--        <dependency>-->
 <!--            <groupId>org.codehaus.groovy</groupId>-->
@@ -107,17 +111,14 @@
         <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
         <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
         <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-groovy -->
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-groovy</artifactId>
-            <version>5.2.8.RELEASE</version>
+            <version>5.5.7</version>
         </dependency>
 
-
-
-
     </dependencies>
-
 
     <build>
     <finalName>test</finalName>
@@ -163,6 +164,25 @@
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
+            </plugin>
+            <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+                <execution>
+                    <id>add-source</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>add-source</goal>
+                    </goals>
+                    <configuration>
+                        <sources>
+                            <source>src/main/groovy/</source>
+                        </sources>
+                    </configuration>
+                </execution>
+            </executions>
             </plugin>
         </plugins>
     </pluginManagement>

@@ -1,0 +1,63 @@
+package io.groovy.spring.controller
+
+import org.springframework.stereotype.Controller
+import org.springframework.ui.Model
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
+
+import javax.servlet.http.HttpServletRequest
+
+@Controller
+//@RequestMapping("/hello")
+class HelloWorldGroovyController {
+
+    @RequestMapping("/")
+    public String showPage() {
+        return "main-menu";
+    }
+
+
+    @RequestMapping("/showApache")
+    public String showRedirect() {
+        return "apache-groovy";
+    }
+
+    @RequestMapping("/showForm")
+    public String showForm() {
+        return "helloworld-form";
+    }
+
+    @RequestMapping("/processForm")
+    public String processForm() {
+        return "helloworld";
+    }
+
+    @RequestMapping("/processFormVersionTwo")
+    public String letsShoutDude(HttpServletRequest request, Model model) {
+        String theName = request.getParameter("studentName");
+
+        theName = theName.toUpperCase();
+
+        String result = "Yo! " + theName;
+
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
+
+    @RequestMapping("/processFormVersionThree")
+    public String processFormVersionThree(@RequestParam("studentName") String theName,
+                                          Model model) {
+//        String theName = request.getParameter("studentName");
+
+        theName = theName.toUpperCase();
+
+        String result = "Het My Friend from v3! " + theName;
+
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
+
+
+}
