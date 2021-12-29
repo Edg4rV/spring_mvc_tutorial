@@ -1,6 +1,7 @@
 package io.groovy.spring.controller
 
 import io.groovy.spring.model.Customer
+
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.validation.BindingResult
@@ -25,9 +26,14 @@ class CustomerController {
 
     @RequestMapping("/processForm")
     String processForm (
-            @Valid @ModelAttribute("customer")  Customer theCustomer,
+            @Valid @ModelAttribute("customer") Customer theCustomer,
             BindingResult theBindingResult) {
 
+
+        println "Last name: |" + theCustomer.getLastName() + "|"
+
+
+        println theBindingResult.hasErrors()
 
         if (theBindingResult.hasErrors()) {
             return "customer-form"
