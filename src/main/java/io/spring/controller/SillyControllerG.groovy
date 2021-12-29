@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 class SillyControllerG {
 
 
-    @RequestMapping("/showGroovy")
-    String displayTheForm() {
-        return "apache-groovy"
-    }
+//    @RequestMapping("/showGroovy")
+//    String displayTheForm() {
+//        return "apache-groovy"
+//    }
 
 
 

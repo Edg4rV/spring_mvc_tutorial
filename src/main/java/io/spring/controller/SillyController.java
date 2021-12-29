@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class SillyController {
-    @RequestMapping("/showForm")
-    String displayTheForm() {
-        return "silly";
-    }
+//    @RequestMapping("/showForm")
+//    String displayTheForm() {
+//        return "silly";
+//    }
 
 }

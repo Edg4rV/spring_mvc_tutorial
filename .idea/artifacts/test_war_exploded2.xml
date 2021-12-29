@@ -20,7 +20,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.14" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.14" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.14" />
-          <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:3.0.9" />
           <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy-ant:3.0.9" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant:1.10.11" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant-junit:1.10.11" />
