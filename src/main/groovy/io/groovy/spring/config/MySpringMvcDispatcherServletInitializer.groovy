@@ -21,4 +21,5 @@ class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDi
         return new String[] { "/" };
     }
 
+
 }
