@@ -44,6 +44,10 @@ class CustomerController {
 
         println "Last name: |" + theCustomer.getLastName() + "|"
 
+        println "Bindingresult: ${theBindingResult}"
+
+        println "\n\n\n\n"
+
 
         println theBindingResult.hasErrors()
 
