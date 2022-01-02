@@ -1,5 +1,7 @@
 package io.groovy.spring.model
 
+import io.groovy.spring.validation.CourseCode
+
 import javax.validation.constraints.Max
 import javax.validation.constraints.Min
 import javax.validation.constraints.NotNull
@@ -26,6 +28,9 @@ class Customer {
 
     @Pattern(regexp = "^[a-zA-z0-0]{5}", message="only 5 chars/digits")
     String postalCode
+
+    @CourseCode(value = "TOPS", message = "must start with Tops")
+    String courseCode
 
 
 }
