@@ -26,10 +26,10 @@ class Customer {
     @Max(value=10L, message = "must be less then or equal to 10")
     Integer freePasses
 
-    @Pattern(regexp = "^[a-zA-z0-0]{5}", message="only 5 chars/digits")
+    @Pattern(regexp = "^[a-zA-z0-9]{5}", message="only 5 chars/digits")
     String postalCode
 
-    @CourseCode(value = "TOPS", message = "must start with Tops")
+    @CourseCode(value = "TOPS", message = "must start with TOPS")
     String courseCode
 
 

@@ -3,7 +3,7 @@ package io.groovy.spring.model
 import groovy.transform.Canonical
 
 @Canonical
-class Student {
+class OldStudent {
 
     String firstName
     String lastName
@@ -13,7 +13,7 @@ class Student {
 
     LinkedHashMap<String, String> countryOptions
 
-    Student() {
+    OldStudent() {
         countryOptions = new LinkedHashMap<>()
         countryOptions.put("ARM", "Armenia")
         countryOptions.put("FR", "France")

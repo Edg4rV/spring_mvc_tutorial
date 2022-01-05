@@ -1,6 +1,6 @@
 package io.groovy.spring.controller
 
-import io.groovy.spring.model.Student
+import io.groovy.spring.model.OldStudent
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.ModelAttribute
@@ -15,7 +15,7 @@ class StudentController {
     @RequestMapping("/showForm")
     String showForm(Model theModel) {
 
-        Student theStudent = new Student()
+        OldStudent theStudent = new OldStudent()
 
         theModel.addAttribute("student", theStudent)
 
@@ -24,7 +24,7 @@ class StudentController {
 
 
     @RequestMapping("/processForm")
-    String processForm(@ModelAttribute("student") Student theStudent) {
+    String processForm(@ModelAttribute("student") OldStudent theStudent) {
 
         println "theStudent: ${theStudent.getFirstName()}"
         println "theStudent: ${theStudent.getLastName()} "
